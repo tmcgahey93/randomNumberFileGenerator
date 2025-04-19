@@ -33,8 +33,9 @@ func main() {
 		nums[i], nums[j] = nums[j], nums[i]
 	})
 
+	fileName := strconv.Itoa(size) + "numbers.txt"
 	// Create output file
-	file, err := os.Create("numbers.txt")
+	file, err := os.Create(fileName)
 	if err != nil {
 		panic(err)
 	}
@@ -45,5 +46,5 @@ func main() {
 		fmt.Fprintln(file, num)
 	}
 
-	fmt.Printf("Generated numbers.txt with %d unordered numbers.\n", size)
+	fmt.Printf("Generated "+fileName+" with %d ordered numbers.\n", size)
 }
