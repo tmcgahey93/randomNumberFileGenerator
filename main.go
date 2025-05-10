@@ -17,7 +17,7 @@ func main() {
 	// Parse size from command-line argument
 	size, err := strconv.Atoi(os.Args[1])
 	if err != nil || size <= 0 {
-		fmt.Println("Please provide a valid positive integer for size.")
+		fmt.Println("Please provide a positive integer for the number of random numbers to be generated.")
 		return
 	}
 
